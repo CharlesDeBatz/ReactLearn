@@ -1,5 +1,3 @@
-import {useState} from "react";
-
 export const Navigation = ({restaurants, setSelectedRestaurant}) => {
     return (
         <nav style={{ display: "flex", justifyContent: "center", gap: "10px", padding: "10px" }}>

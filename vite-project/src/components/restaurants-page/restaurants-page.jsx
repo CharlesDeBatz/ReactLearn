@@ -1,10 +1,10 @@
-import {Restaurant} from "../restaurant/restaurant";
 import { restaurants } from "../../../materials/mock.js";
-import {useState} from "react";
 import {Navigation} from "../navigation/navigation";
+import {Restaurant} from "../restaurant/restaurant";
+import {useSelectedRestaurant} from "./useSelectedRestaurant";
 
 export const RestaurantsPage = () => {
-    const [selectedRestaurant, setSelectedRestaurant] = useState(restaurants[0]);
+    const { selectedRestaurant, setSelectedRestaurant } = useSelectedRestaurant(restaurants[0]);
 
     return (
         <>
