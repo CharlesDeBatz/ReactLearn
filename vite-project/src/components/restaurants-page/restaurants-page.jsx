@@ -4,12 +4,12 @@ import {Restaurant} from "../restaurant/restaurant";
 import {useSelectedRestaurant} from "./useSelectedRestaurant";
 
 export const RestaurantsPage = () => {
-    const { selectedRestaurant, setSelectedRestaurant } = useSelectedRestaurant(restaurants[0]);
+    const { selectedRestaurantId, setSelectedRestaurant } = useSelectedRestaurant(restaurants[0].id);
 
     return (
         <>
-            <Navigation restaurants={ restaurants } setSelectedRestaurant={ setSelectedRestaurant } />
-            <Restaurant restaurant={selectedRestaurant} />
+            <Navigation restaurants={ restaurants } selectedRestaurantId={selectedRestaurantId} setSelectedRestaurant={ setSelectedRestaurant } />
+            <Restaurant  restaurants={ restaurants } selectedRestaurantId={selectedRestaurantId} />
         </>
     );
 }
